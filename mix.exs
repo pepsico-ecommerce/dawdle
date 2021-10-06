@@ -42,7 +42,8 @@ defmodule Dawdle.MixProject do
       env: [
         backend: {:system, :module, "DAWDLE_BACKEND", Dawdle.Backend.Local},
         start_pollers: {:system, :boolean, "DAWDLE_START_POLLERS", false},
-        forward_raw_messages: {:system, :boolean, "DAWDLE_FORWARD_RAW_MESSAGES", false},
+        forward_raw_messages:
+          {:system, :boolean, "DAWDLE_FORWARD_RAW_MESSAGES", false},
         "Elixir.Dawdle.Backend.SQS": [
           region: {:system, "DAWDLE_SQS_REGION", "us-west-2"},
           queue_url: {:system, "DAWDLE_SQS_QUEUE_URL", ""}
@@ -57,20 +58,20 @@ defmodule Dawdle.MixProject do
       {:confex, "~> 3.4"},
       {:configparser_ex, "~> 4.0", only: [:dev, :test]},
       {:credo, "~> 1.0", only: [:dev, :test], runtime: false},
-      {:dialyxir, "~> 1.0.0-rc.6", only: [:dev], runtime: false},
+      {:dialyxir, "~> 1.1", only: [:dev], runtime: false},
       {:eventually, "~> 1.0", only: :test},
-      {:ex_aws, "~> 2.0"},
+      {:ex_aws, "~> 2.2"},
       {:ex_aws_sqs, "~> 3.0"},
       {:ex_check, ">= 0.0.0", only: [:dev, :test], runtime: false},
       {:ex_doc, ">= 0.0.0", only: [:dev, :test]},
-      {:excoveralls, "~> 0.10", only: :test},
+      {:excoveralls, "~> 0.14", only: :test},
       {:faker, "~> 0.12", only: :test},
-      {:hackney, "~> 1.7"},
+      {:hackney, "~> 1.18"},
       {:mock, "~> 0.3", only: :test},
       {:module_config, "~> 1.0"},
       {:poison, "~> 3.0 or ~> 4.0"},
       {:sweet_xml, "~> 0.6"},
-      {:telemetry, "~> 0.4.0"}
+      {:telemetry, "~> 1.0"}
     ]
   end
 
