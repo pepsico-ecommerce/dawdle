@@ -69,7 +69,7 @@ defmodule Dawdle.MixProject do
       {:hackney, "~> 1.18"},
       {:mock, "~> 0.3", only: :test},
       {:module_config, "~> 1.0"},
-      {:poison, "~> 3.0 or ~> 4.0"},
+      {:poison, "~> 3.0 or ~> 4.0 or ~> 5.0"},
       {:sweet_xml, "~> 0.6"},
       {:telemetry, "~> 1.0"}
     ]
